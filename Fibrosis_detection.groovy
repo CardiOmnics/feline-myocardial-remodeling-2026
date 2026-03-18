@@ -12,7 +12,7 @@
  * Run steps 1–2 first. After manual review (step 3), uncomment and run step 4.
  *
  * Required pixel classifiers (must be present in the QuPath project):
- *   "Tissue identification"          — tissue vs. background (14.7 µm/pixel,
+ *   "Tissue_detection_210824"          — tissue vs. background (14.7 µm/pixel,
  *                                      channel average threshold 225, sigma 5,
  *                                      Gaussian prefilter)
  *   "LowRes_Fibrosis_290824"         — large connective tissue regions (3.6 µm/pixel,
@@ -33,7 +33,7 @@ import qupath.lib.roi.RoiTools.CombineOp
 // ── Step 1: Tissue detection ──────────────────────────────────────────────────
 // Minimum tissue fragment: 1 × 10⁶ µm²; minimum hole to fill: 200,000 µm²
 
-createAnnotationsFromPixelClassifier("Tissue identification", 1000000.0, 200000.0, "SPLIT", "DELETE_EXISTING")
+createAnnotationsFromPixelClassifier("Tissue_detection_210824", 1000000.0, 200000.0, "SPLIT", "DELETE_EXISTING")
 runPlugin('qupath.lib.plugins.objects.FillAnnotationHolesPlugin', '{}')
 
 // ── Step 2: Exclude border connective tissue ──────────────────────────────────
