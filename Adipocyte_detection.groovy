@@ -12,7 +12,7 @@
  *   createAnnotationsFromPixelClassifier: min object size 10,000 µm², min hole size 3,000 µm²
  *   createDetectionsFromPixelClassifier:  min object size 70 µm²,     min hole size 30 µm²
  *
- * See supplemental methods (Section X) for classifier training details.
+ * See supplemental methods (Section 1) for classifier training details.
  */
 
 selectAnnotations();
